@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</head>
+<style>
+    body{
+        background-color: antiquewhite;
+    }
+.b1{
+    width: 145px;
+    height: 145px;
+    background-color: red;
+    margin: 10px;
+}
+.b2{
+    width: 145px;
+    height: 145px;
+    background-color: blue;
+    margin: 10px;
+}
+.b3{
+    width: 145px;
+    height: 145px;
+    background-color: green;
+    margin: 10px;
+}
+#image0{
+    width: 145px;
+    height: 145px;
+    background-color: yellow;
+}
+</style>
+<body>
+    <h1>Jquery Class</h1>
+    <hr>
+    <button class="btn1">FadeIn Box 1</button>
+    <button class="btn2">FadeOut Box 1</button>
+    <button class="btn9">FadeIn Box 2</button>
+    <button class="btn10">FadeOut Box 2</button>
+    <button class="btn11">FadeIn Box 3</button>
+    <button class="btn12">FadeOut Box 3</button>
+    <button class="btn3">Load1</button>
+    <button class="btn7">Load2</button>
+    <button class="btn8">Load3</button>
+    <button class="btn4">Before</button>
+    <button class="btn5">After</button>
+    <button class="btn6">slideToggle</button>
+    
+    <div class="b1">
+        Box1
+    </div>
+
+    <div class="b2">
+        Box2
+    </div>
+    <div class="b3">
+        Box3
+    </div><br><br>
+    <div>
+        <img src="p1.jpg" alt="" width="145px" height="145px" id="image0">
+    </div><br><br>
+    <div class="container" style="display: flex; align-items: center; justify-content: space-evenly;">
+        <div class="card" style="width: 18rem;">
+            <img src="p1.jpg" class="card-img-top" alt="..." id="cimg1" height="145px" width="145px">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text1">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="p2.jpg" class="card-img-top" alt="..." id="cimg2" height="145px" width="145px">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text2">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="p4.jpg" class="card-img-top" alt="..." id="cimg3" height="145px" width="145px">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+          $("#cimg1").mouseenter(function(){
+            $("#cimg1").attr("src","p3.jpg")
+          });
+          $("#cimg1").mouseleave(function(){
+            $("#cimg1").attr("src","p1.jpg")
+          });
+          $("#cimg2").mouseenter(function(){
+            $("#cimg2").attr("src","p4.jpg")
+          });
+          $("#cimg2").mouseleave(function(){
+            $("#cimg2").attr("src","p2.jpg")
+          });
+          $("#cimg3").mouseenter(function(){
+            $("#cimg3").attr("src","p4.jpg")
+          });
+          $("#cimg3").mouseleave(function(){
+            $("#cimg3").attr("src","p2.jpg")
+          });
+          $(".btn1").click(function(){
+            $(".b1").fadeIn(1000);
+          });
+          $(".btn2").click(function(){
+            $(".b1").fadeOut(2000);
+            });
+          $(".btn9").click(function(){
+            $(".b2").fadeIn(1000);
+          });
+          $(".btn10").click(function(){
+            $(".b2").fadeOut(2000);
+        });
+          $(".btn11").click(function(){
+            $(".b3").fadeIn(1000);
+          });
+          $(".btn12").click(function(){
+            $(".b3").fadeOut(2000);
+          });
+          $(".btn3").click(function(){
+            $("#card-text1").load("dogs.txt");
+          });
+          $(".btn7").click(function(){
+            $("#card-text2").load("cats.txt");
+          });
+          $(".btn8").click(function(){
+            $("#card-text3").load("cats.txt");
+          });
+          
+        });
+        
+    </script>
+</body>
+</html>
